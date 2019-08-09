@@ -23,3 +23,18 @@ Learning:
 
 Issue:
 1. How to access the other pages of the app?
+
+Iteration:
+
+Goal - the most simple implementation that shows devs the errors but doen't error / exit any process with a non `0` value. 
+
+- Decided to use a node script to enable running of `pa11y` with multiple urls. 
+- Implemented with [shelljs](https://www.npmjs.com/package/shelljs) as it enables use of the linux shell within node. 
+- By using Javascript this is hopefully more familar than a bash script, and will not need executing rights. 
+- The object data structure means that urls can be reference by property and value, enabling dynamically named screenshot output.
+- Exit code is 0 regardless of whether test pass or fail. 
+- Add bespoke messaging via Javascript to amplify the pa11y output.
+- Assumes that the application is all ready built and running.
+
+Next steps:
+    - Add to a test script (last part or first part?)
