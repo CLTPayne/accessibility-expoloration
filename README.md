@@ -7,14 +7,14 @@ Keen to learn more about accessibility and how it's a responsibility of a web de
 ##### Live App:
 Used the cli (rather than node option) to run the following queries against a basic javascript and html [chess game repo](https://github.com/CLTPayne/pairing-rowan):
 
-```pa11y http://127.0.0.1:8080/chessboard.html -S ./screenCaptureLocalServedChessSite.png -r json > reportLocalServedChessSite.json```
+```pa11y http://127.0.0.1:8080/chessboard.html -S ./pa11yOutputs/screenCaptureLocalServedChessSite.png -r json > ./pa11yOutputs/reportLocalServedChessSite.json```
 
 This runs the test against the whole home page, and encountered 31 errors (plus further notices and warnings that you can choose to include in the output with `--include-warnings` or `--include-notices`). 
 
 You can also see a snapshot of the site the report has been run against. This confirms that the test has been run against the intended portion of the site. 
 
 ##### Absolute Path To HTML:
-```pa11y ~/Documents/Projects/pairing-rowan/chessboard.html -S ./screenCaptureAbsolutePathToChessHTML.png -r json > reportAbsolutePathToChessHTML.json```
+```pa11y ~/Documents/Projects/pairing-rowan/chessboard.html -S ./pa11yOutputs/screenCaptureAbsolutePathToChessHTML.png -r json > ./pa11yOutputs/reportAbsolutePathToChessHTML.json```
 
 This means that anything rendered with javascript or not client rendered will not be part of the tested page. You can see this evidenced in the screenshots included in this repo. 
 
