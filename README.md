@@ -24,6 +24,11 @@ Learning:
 Issue:
 1. How to access the other pages of the app?
 
+#### Parallel NPM Script: 
+Use `npm-run-all` to run a series of scripts in parallel. This enables spinning up the server for running the application locally. 
+Adding in a sleep / wait in order to allow time for the site to build and in order to shut down the app. 
+![Parallel Script](./run_pa11y_via_npm_script.png)
+
 Iteration:
 
 Goal - the most simple implementation that shows devs the errors but doen't error / exit any process with a non `0` value. 
