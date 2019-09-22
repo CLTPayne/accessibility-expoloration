@@ -56,4 +56,5 @@ Goal - in some environments, when there is setup to spin up a version of the app
 a) When any current errors have been fixed change the exit code over ride to a breaking exit code. 
 
 Example console output for this script:
+
 <img width="587" alt="Spark Example Pa11y Output" src="https://user-images.githubusercontent.com/35195024/63343895-0b3aad80-c347-11e9-932e-532bdb4878f9.png">
