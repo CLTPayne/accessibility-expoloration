@@ -24,7 +24,7 @@ Learning:
 Issue:
 1. How to access the other pages of the app?
 
-Iteration:
+Iteration 1: 
 
 Goal - the most simple implementation that shows devs the errors but doen't error / exit any process with a non `0` value. 
 
@@ -38,3 +38,18 @@ Goal - the most simple implementation that shows devs the errors but doen't erro
 
 Next steps:
     - Add to a test script (last part or first part?)
+
+Iteration 2:
+
+Goal - in some environments, when there is setup to spin up a version of the application for e2e tests, this is potentially worth piggy backing on to run Pa11y in CI. Discussed with teams and feel this would be annoying if builds silently broke but could be great for raising awareness if you could have a 'job' in Circle Ci that was not required for a deploy but was kicked of post build and showed red if issues were found with accessibility. When the team is upto date / more familiar can also add as a pre-push step. 
+
+1. Implement `pa11y-ci` - selected as it's widely used across the FT. Regular `pa11y` does not work in CI. 
+2. Follow any current functional / e2e test setup for consistency. Further to the default `pa11y-ci` output, add some extra messaging / colours have been added to increase visibility in the console.
+3. Initial requirement was to output errors to the console but to not break the build on discovery of an error - script overrides the `pa11y-ci` exit code with `0` regardless of errors being found.
+4. To ensure the process is easy for developers to maintain and update - `.pa11yci` config contains an array of URLs which can be extended for future endpoints / pages.
+
+### Next Steps
+a) When any current errors have been fixed change the exit code over ride to a breaking exit code. 
+
+Example console output for this script:
+<img width="587" alt="Spark Example Pa11y Output" src="https://user-images.githubusercontent.com/35195024/63343895-0b3aad80-c347-11e9-932e-532bdb4878f9.png">

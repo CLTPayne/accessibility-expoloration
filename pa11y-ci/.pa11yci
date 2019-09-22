@@ -1,0 +1,19 @@
+{
+    "defaults": {
+        "timeout": 15000,
+        "wait": 3500,
+        "chromeLaunchConfig": {
+            "args": ["--no-sandbox"]
+        }
+    },
+    "urls": [
+        {
+            "url": "http://localhost:8083",
+            "screenCapture": "./pa11y/home.png"
+        },
+				{
+            "url": "http://localhost:8083/editor",
+            "screenCapture": "./pa11y/edit.png"
+        }
+    ]
+}

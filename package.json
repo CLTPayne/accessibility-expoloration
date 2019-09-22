@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "a11y-ci": "pa11y-ci",
-    "a11y": "node ./scripts/pa11y.js"
+    "a11y": "node ./scripts/pa11y.js",
+    "a11y-pre-built": "bash ./scripts/pa11y.sh",
+		"a11y-circle-ci": "npm run build && npm run a11y-pre-built"
   },
   "repository": {
     "type": "git",
