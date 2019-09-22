@@ -19,7 +19,7 @@ PORT=8083
 node ./test/api/fake-server.js &
 fid=$!
 
- # set spark api and fotoware api to fake server
+ # set api to fake server
 API_ROOT="http://localhost:${FAKE_SERVER_PORT:-3000}"
 
  npm run production:server &
