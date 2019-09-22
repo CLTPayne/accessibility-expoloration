@@ -43,6 +43,8 @@ Goal - the most simple implementation that shows devs the errors but doen't erro
 Next steps:
     - Add to a test script (last part or first part?)
 
+Feedback - npm script using additional libraries adds further dependencies to the system that need to be maintained. Why not achive this without `shelljs`?
+
 Iteration 2:
 
 Goal - in some environments, when there is setup to spin up a version of the application for e2e tests, this is potentially worth piggy backing on to run Pa11y in CI. Discussed with teams and feel this would be annoying if builds silently broke but could be great for raising awareness if you could have a 'job' in Circle Ci that was not required for a deploy but was kicked of post build and showed red if issues were found with accessibility. When the team is upto date / more familiar can also add as a pre-push step. 
